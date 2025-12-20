@@ -1,0 +1,371 @@
+/* Service Detail Landing Page Styles */
+
+.service-landing-page {
+    padding-top: var(--header-height);
+    background: #fff;
+}
+
+/* 1. Service Hero - Full screen background */
+.service-hero {
+    height: 60vh;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.service-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    /* Dark overlay for text readability */
+}
+
+.service-hero-card {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    max-width: 550px;
+    color: #fff;
+}
+
+.service-hero-card h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.service-hero-card p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+/* 2. Info Section (Image Left, Features Right) */
+.service-info {
+    background: #fff;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.info-image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 3px solid transparent;
+}
+
+.info-image-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 20px;
+    padding: 3px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.info-image-wrapper:hover::before {
+    opacity: 1;
+}
+
+.info-image-wrapper:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 60px rgba(255, 102, 0, 0.2),
+        0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.info-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.info-image-wrapper:hover .info-image {
+    transform: scale(1.08);
+}
+
+.info-features {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.feature-row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.feature-row:hover {
+    background: rgba(255, 102, 0, 0.05);
+    transform: translateX(8px);
+    box-shadow: 0 4px 12px rgba(255, 102, 0, 0.1);
+}
+
+.feature-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f4f8;
+    border-radius: 50%;
+}
+
+.feature-text h3 {
+    font-size: 1.25rem;
+    color: var(--secondary);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.feature-text p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 3. Process Section */
+.process-section {
+    padding-bottom: 80px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    position: relative;
+}
+
+.process-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+}
+
+.p-icon {
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    color: var(--primary);
+}
+
+.p-arrow {
+    font-size: 2rem;
+    color: #ccc;
+    font-weight: 300;
+}
+
+/* 4. Stats Banner */
+.stats-banner {
+    background: #e0f2f1;
+    /* Light teal/blue from reference */
+    padding: 60px 0;
+}
+
+.stats-flex {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.stat-box h3 {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stat-box .underline {
+    font-weight: 800;
+    text-decoration: underline;
+    text-decoration-color: var(--primary);
+    text-underline-offset: 4px;
+}
+
+/* 5. FAQ Section */
+.faq-section {
+    background: #fff;
+}
+
+.faq-list {
+    max-width: 900px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item.open {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border-color: transparent;
+}
+
+.faq-question {
+    background: #fff;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--secondary);
+    margin: 0;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+    background: #fafafa;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 300px;
+    /* Arbitrary large height */
+    transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+}
+
+.faq-answer p {
+    padding: 20px 25px;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+    border-top: 1px solid #eee;
+}
+
+/* 6. CTA Box (reusing/customizing) */
+.vehicle-breakdown-cta {
+    padding-bottom: 80px;
+}
+
+.cta-orange-box {
+    background: var(--primary);
+    color: #fff;
+    padding: 60px;
+    text-align: center;
+    border-radius: 0 0 16px 16px;
+    /* Similar to reference bottom flow */
+    /* Or fully rounded if standalone */
+    border-radius: 4px;
+}
+
+.cta-orange-box h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.cta-orange-box p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.btn-secondary-dark {
+    background: var(--secondary);
+    color: #fff;
+    padding: 15px 40px;
+    font-weight: 700;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.btn-secondary-dark:hover {
+    background: #001f3f;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 991px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-steps {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .p-arrow {
+        transform: rotate(90deg);
+    }
+
+    .stats-flex {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .service-hero {
+        height: 500px;
+    }
+}

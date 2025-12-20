@@ -1,0 +1,8 @@
+.app-container {
+  overflow-x: hidden;
+}
+
+.info-page h1 {
+  font-size: 3rem;
+  color: var(--secondary);
+}

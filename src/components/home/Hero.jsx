@@ -1,0 +1,51 @@
+import React from 'react';
+import { ShieldCheck, MapPin, Zap } from 'lucide-react';
+import './Hero.css';
+
+const Hero = () => {
+    return (
+        <section className="hero">
+            <div className="hero-overlay"></div>
+            <div className="container">
+                <div className="hero-content">
+                    <div className="glass-card hero-card">
+                        <h1 className="hero-title">
+                            Roadside Assistance <br />
+                            <span>Made Easy!</span>
+                        </h1>
+                        <p className="hero-description">
+                            Get 24/7 reliability in Bengaluru. From tire punctures to battery jumpstarts,
+                            our expert mechanics reach you in 30 minutes.
+                        </p>
+
+                        <div className="hero-stats-mini">
+                            <div className="mini-stat">
+                                <ShieldCheck color="#FF6600" size={20} />
+                                <span>OEM Trained</span>
+                            </div>
+                            <div className="mini-stat">
+                                <MapPin color="#FF6600" size={20} />
+                                <span>Pan Bengaluru</span>
+                            </div>
+                            <div className="mini-stat">
+                                <Zap color="#FF6600" size={20} />
+                                <span>30 Min Reach</span>
+                            </div>
+                        </div>
+
+                        <div className="hero-actions">
+                            <a href="/get-rescued" className="btn btn-primary btn-lg">
+                                GET RESCUED NOW
+                            </a>
+                            <a href="tel:9986500500" className="btn btn-outline">
+                                Call 9986 500 500
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Hero;
