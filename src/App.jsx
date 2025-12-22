@@ -8,7 +8,6 @@ import Contact from './pages/Contact';
 import ServiceDetail from './pages/ServiceDetail';
 import About from './pages/About';
 import Blog from './pages/Blog';
-import SOSButton from './components/common/SOSButton';
 import useScrollReveal from './hooks/useScrollReveal';
 import './App.css';
 
@@ -22,13 +21,21 @@ const InfoPage = ({ title }) => (
   </div>
 );
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
+
 function App() {
   useScrollReveal(); // Activate scroll animations
   return (
     <Router>
       <div className="app-container">
+        <ScrollToTop />
         <Navbar />
-        <ScrollToTop /> {/* Helper to scroll top on route change */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/get-rescued" element={<GetRescued />} />
@@ -48,19 +55,9 @@ function App() {
           <Route path="/refund-policy" element={<InfoPage title="Cancellation & Refund Policy" />} />
         </Routes>
         <Footer />
-        <SOSButton />
       </div>
     </Router>
   );
 }
-
-// Simple scroll restoration component
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return null;
-};
 
 export default App;
