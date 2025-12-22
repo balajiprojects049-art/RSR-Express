@@ -62,6 +62,18 @@ const serviceData = {
             {
                 q: 'Do you repair all car punctures and bike punctures?',
                 a: 'Yes, we can help with any type of vehicle puncture — car, bike, tube, tubeless tyre punctures.'
+            },
+            {
+                q: 'Do you offer tube replacement?',
+                a: 'Yes, we carry standard tubes for most bikes and cars. If yours is a specialized size, let us know during the call.'
+            },
+            {
+                q: 'What if the tire is completely damaged/burst?',
+                a: 'In case of a burst tire that cannot be repaired, we can help you fit your spare tire or tow your vehicle to the nearest tire shop.'
+            },
+            {
+                q: 'Is the repair permanent?',
+                a: 'Yes, we use high-quality mushroom patches or plugs that provide a permanent fix for tubeless tires.'
             }
         ]
     },
@@ -77,7 +89,10 @@ const serviceData = {
         ],
         faqs: [
             { q: 'Will a jumpstart damage my car?', a: 'No, our professionals use surge-protected equipment.' },
-            { q: 'Do you replace batteries?', a: 'Yes, we can also arrange for a new battery if yours is dead.' }
+            { q: 'Do you replace batteries?', a: 'Yes, we can also arrange for a new battery if yours is dead.' },
+            { q: 'How do I know if it\'s a battery issue?', a: 'If your lights are dim, the horn is weak, or the car makes a clicking sound when starting, it\'s likely a battery issue.' },
+            { q: 'Do you check the alternator?', a: 'Yes, after jumpstarting, we check if your alternator is charging the battery correctly.' },
+            { q: 'How long does a jumpstart take?', a: 'The process takes less than 10 minutes once we reach your location.' }
         ]
     },
     'repairs': {
@@ -92,7 +107,9 @@ const serviceData = {
         ],
         faqs: [
             { q: 'What kind of repairs do you do?', a: 'We handle clutch cables, fuses, spark plugs, and other minor repairs.' },
-            { q: 'What if it cannot be repaired?', a: 'We will tow your vehicle to the nearest workshop.' }
+            { q: 'What if it cannot be repaired?', a: 'We will tow your vehicle to the nearest workshop.' },
+            { q: 'Do you carry spare parts?', a: 'We carry common spares like fuses, cables, and bulbs. For specific parts, we can purchase them from a nearby shop for you.' },
+            { q: 'What if the engine is overheated?', a: 'We will inspect the coolant levels and radiator. If it\'s a minor leak, we fix it. If serious, we recommend towing.' }
         ]
     },
     'fuel': {
@@ -107,7 +124,9 @@ const serviceData = {
         ],
         faqs: [
             { q: 'How much fuel do you deliver?', a: 'We typically deliver up to 5 litres, sufficient to reach the nearest station.' },
-            { q: 'Is there a delivery charge?', a: 'Yes, a nominal delivery fee applies on top of the fuel cost.' }
+            { q: 'Is there a delivery charge?', a: 'Yes, a nominal delivery fee applies on top of the fuel cost.' },
+            { q: 'Is the fuel quality guaranteed?', a: 'Absolutely. We purchase fuel only from trusted, branded petrol pumps immediately after your order.' },
+            { q: 'Do you provide bill for the fuel?', a: 'Yes, we provide the original bill from the pump along with our receipt.' }
         ]
     },
     'key': {
@@ -122,7 +141,9 @@ const serviceData = {
         ],
         faqs: [
             { q: 'Can you unlock luxury cars?', a: 'Yes, our experts are trained to handle various locking mechanisms.' },
-            { q: 'Do you make duplicate keys?', a: 'Currently we only provide lockout services (opening the door).' }
+            { q: 'Do you make duplicate keys?', a: 'Currently we only provide lockout services (opening the door).' },
+            { q: 'Will my car door get scratched?', a: 'No, we use air wedges and long-reach tools to unlock doors without any damage.' },
+            { q: 'What proof do I need to show?', a: 'For security, you must show a valid ID and vehicle papers matching your name.' }
         ]
     },
     'bike': {
@@ -136,8 +157,10 @@ const serviceData = {
             { icon: <MapPin size={32} color="#002D5B" />, title: 'Anywhere Pickup', desc: 'We pick up from highways, basements, or homes.' }
         ],
         faqs: [
-            { q: 'Can you tow superbikes?', a: 'Yes, our flatbed trucks are perfect for safely transporting mostly premium bikes.' },
-            { q: 'Do you tow to the service center?', a: 'We can drop your bike at any location or garage of your choice.' }
+            { q: 'Can you tow superbikes?', a: 'Yes, our flatbed trucks are perfect for safely transporting premium bikes.' },
+            { q: 'Do you tow to the service center?', a: 'We can drop your bike at any location or garage of your choice.' },
+            { q: 'Is my bike safe on the truck?', a: 'Yes, we handle superbikes daily using soft straps and wheel chocks to ensure zero scratches.' },
+            { q: 'Can I travel with the truck?', a: 'Yes, usually one person can travel in the cabin with the driver.' }
         ]
     },
     'car': {
@@ -152,7 +175,10 @@ const serviceData = {
         ],
         faqs: [
             { q: 'Is flatbed towing better?', a: 'Yes, for most modern cars (especially AWD/4WD), flatbed is the safest option.' },
-            { q: 'How long will the tow truck take?', a: 'We usually dispatch the nearest truck immediately to reach you within 30-45 mins.' }
+            { q: 'How long will the tow truck take?', a: 'We usually dispatch the nearest truck immediately to reach you within 30-45 mins.' },
+            { q: 'Do you tow automatic transmission cars?', a: 'Yes, our flatbed trucks prevent any transmission damage for automatic/AWD cars.' },
+            { q: 'Can you tow from basement parking?', a: 'Yes, we have specialized wheel-lift capability for low-height basement extractions.' },
+            { q: 'Is accident towing covered by insurance?', a: 'We provide GST bills which you can claim if your insurance covers towing.' }
         ]
     },
     'default': {

@@ -1,0 +1,109 @@
+import React, { useState } from 'react';
+import { Calculator, CheckCircle, AlertCircle } from 'lucide-react';
+import './CostEstimator.css';
+
+const CostEstimator = () => {
+    const [vehicle, setVehicle] = useState('');
+    const [service, setService] = useState('');
+    const [estimate, setEstimate] = useState(null);
+
+    const calculateEstimate = () => {
+        if (!vehicle || !service) return;
+
+        let basePrice = 0;
+
+        // Base pricing logic (Example values in INR)
+        const pricing = {
+            'bike': { 'puncture': 300, 'battery': 500, 'towing': 1200, 'fuel': 400 },
+            'car': { 'puncture': 500, 'battery': 800, 'towing': 2500, 'fuel': 600 },
+            'suv': { 'puncture': 700, 'battery': 1200, 'towing': 3500, 'fuel': 800 }
+        };
+
+        const price = pricing[vehicle][service];
+
+        // Add range for estimate
+        setEstimate({
+            min: price,
+            max: price + (vehicle === 'bike' ? 200 : 500)
+        });
+    };
+
+    return (
+        <section className="estimator-section section-padding">
+            <div className="container">
+                <div className="estimator-grid">
+                    <div className="estimator-content">
+                        <span className="subtitle">TRANSPARENT PRICING</span>
+                        <h2 className="section-title">Get an Instant Cost Estimate</h2>
+                        <p className="section-desc">
+                            No hidden fees. Check the estimated cost for your vehicle service relative to your needs.
+                        </p>
+
+                        <div className="estimator-features">
+                            <div className="est-feature">
+                                <CheckCircle size={20} color="#FF6600" />
+                                <span>No subscription required</span>
+                            </div>
+                            <div className="est-feature">
+                                <CheckCircle size={20} color="#FF6600" />
+                                <span>Pay only after service</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="estimator-card glass-card">
+                        <div className="est-header">
+                            <Calculator size={24} color="#FF6600" />
+                            <h3>Service Calculator</h3>
+                        </div>
+
+                        <div className="est-form">
+                            <div className="form-group">
+                                <label>Vehicle Type</label>
+                                <select value={vehicle} onChange={(e) => setVehicle(e.target.value)} className="form-select">
+                                    <option value="">Select your vehicle</option>
+                                    <option value="bike">Bike / Scooter</option>
+                                    <option value="car">Car (Hatchback/Sedan)</option>
+                                    <option value="suv">SUV / Luxury Car</option>
+                                </select>
+                            </div>
+
+                            <div className="form-group">
+                                <label>Service Needed</label>
+                                <select value={service} onChange={(e) => setService(e.target.value)} className="form-select">
+                                    <option value="">Select service</option>
+                                    <option value="puncture">Flat Tyre / Puncture</option>
+                                    <option value="battery">Battery Jumpstart</option>
+                                    <option value="towing">Towing Service</option>
+                                    <option value="fuel">Fuel Delivery</option>
+                                </select>
+                            </div>
+
+                            <button
+                                className="btn btn-primary btn-block est-btn"
+                                onClick={calculateEstimate}
+                                disabled={!vehicle || !service}
+                            >
+                                Calculate Cost
+                            </button>
+
+                            {estimate && (
+                                <div className="estimate-result animate-fadeInUp">
+                                    <div className="price-label">Estimated Cost</div>
+                                    <div className="price-value">₹{estimate.min} - ₹{estimate.max}</div>
+                                    <div className="price-note">
+                                        <AlertCircle size={14} />
+                                        <span>Final price depends on exact location & distance</span>
+                                    </div>
+                                    <a href="/get-rescued" className="btn-link">Book Now &rarr;</a>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default CostEstimator;

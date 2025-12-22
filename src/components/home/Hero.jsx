@@ -11,7 +11,7 @@ const Hero = () => {
                     <div className="glass-card hero-card">
                         <h1 className="hero-title">
                             Roadside Assistance <br />
-                            <span>Made Easy!</span>
+                            <span className="typing-text">Made Easy!</span>
                         </h1>
                         <p className="hero-description">
                             Get 24/7 reliability in Bengaluru. From tire punctures to battery jumpstarts,
@@ -37,8 +37,8 @@ const Hero = () => {
                             <a href="/get-rescued" className="btn btn-primary btn-lg">
                                 GET RESCUED NOW
                             </a>
-                            <a href="tel:9986500500" className="btn btn-outline">
-                                Call 9986 500 500
+                            <a href="tel:9111818222" className="btn btn-outline">
+                                Call 9111 818 222
                             </a>
                         </div>
                     </div>

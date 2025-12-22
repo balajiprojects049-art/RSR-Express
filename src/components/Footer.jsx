@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
 import './Footer.css';
 import logo from '../assets/logo.png';
 
@@ -22,6 +22,14 @@ const Footer = () => {
                     <div className="footer-brand">
                         <img src={logo} alt="RSR EXPRESS" className="footer-logo" />
                         <p className="footer-tagline">Your trusted roadside assistance partner</p>
+                        <div className="footer-social">
+                            <a href="https://www.facebook.com/share/1Dhp6afqY6/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                <Facebook size={20} />
+                            </a>
+                            <a href="https://www.instagram.com/rsr.express?igsh=dnhqaWYyanJjMnJ5" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <Instagram size={20} />
+                            </a>
+                        </div>
                     </div>
 
                     <div className="footer-links-group">

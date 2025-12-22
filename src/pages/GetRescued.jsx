@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
-import { Truck, Bike, Car, ChevronRight, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { Truck, Bike, Car, ChevronRight, AlertCircle, CheckCircle2, MapPin } from 'lucide-react';
 import './GetRescued.css';
 
 const GetRescued = () => {
     const [step, setStep] = useState(1);
+    const [isLocating, setIsLocating] = useState(false);
     const [formData, setFormData] = useState({
         vehicleType: '',
         makeModel: '',
         regNumber: '',
         issue: '',
-        phone: ''
+        phone: '',
+        location: ''
     });
 
     const handleVehicleSelect = (type) => {
@@ -19,6 +21,29 @@ const GetRescued = () => {
 
     const handleInputChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleGetLocation = () => {
+        if (!navigator.geolocation) {
+            alert("Geolocation is not supported by your browser");
+            return;
+        }
+
+        setIsLocating(true);
+
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const { latitude, longitude } = position.coords;
+                const mapLink = `https://www.google.com/maps?q=${latitude},${longitude}`;
+                setFormData(prev => ({ ...prev, location: mapLink }));
+                setIsLocating(false);
+            },
+            (error) => {
+                console.error("Error fetching location:", error);
+                alert("Unable to retrieve your location. Please enter it manually.");
+                setIsLocating(false);
+            }
+        );
     };
 
     const handleSubmit = (e) => {
@@ -62,6 +87,29 @@ const GetRescued = () => {
                             <p className="form-subtitle">Fill in the details for a faster response</p>
 
                             <form onSubmit={handleSubmit} className="rescue-form">
+                                <div className="form-group">
+                                    <label>Current Location</label>
+                                    <div className="location-input-group">
+                                        <input
+                                            type="text"
+                                            name="location"
+                                            placeholder="Landmark or Address"
+                                            value={formData.location}
+                                            onChange={handleInputChange}
+                                            required
+                                        />
+                                        <button
+                                            type="button"
+                                            className="btn-location"
+                                            onClick={handleGetLocation}
+                                            disabled={isLocating}
+                                        >
+                                            <MapPin size={18} />
+                                            {isLocating ? 'Locating...' : 'Use Current Location'}
+                                        </button>
+                                    </div>
+                                </div>
+
                                 <div className="form-group">
                                     <label>Vehicle Make & Model</label>
                                     <input
@@ -136,7 +184,7 @@ const GetRescued = () => {
                                 </ul>
                             </div>
 
-                            <a href="tel:9986500500" className="btn btn-secondary btn-block">
+                            <a href="tel:9111818222" className="btn btn-secondary btn-block">
                                 CALL SUPPORT INSTEAD
                             </a>
                         </div>

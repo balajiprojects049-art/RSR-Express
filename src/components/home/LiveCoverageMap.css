@@ -1,0 +1,225 @@
+.live-map-section {
+    background-color: #f8f9fa;
+}
+
+.map-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.live-map-display {
+    width: 100%;
+    height: 400px;
+    background-color: #e5e9f2;
+    background-image:
+        radial-gradient(#d1d8e6 1px, transparent 1px),
+        radial-gradient(#d1d8e6 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* Radar Sweep Effect */
+.radar-sweep {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent 0deg, rgba(46, 204, 113, 0.1) 60deg, transparent 61deg);
+    transform-origin: 0 0;
+    /* Changed origin logic handled below */
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: radar-spin 4s linear infinite;
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+@keyframes radar-spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Mechanic Pin */
+.mechanic-pin {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+.pin-icon {
+    width: 24px;
+    height: 24px;
+    background: #2ecc71;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    /* Arrow direction */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.pin-pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(46, 204, 113, 0.4);
+    animation: pin-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+    z-index: 1;
+}
+
+@keyframes pin-ping {
+
+    75%,
+    100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
+}
+
+.pin-tooltip {
+    position: absolute;
+    bottom: 35px;
+    background: #333;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.mechanic-pin:hover .pin-tooltip {
+    opacity: 1;
+}
+
+/* User Pin */
+.user-pin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+}
+
+.user-label {
+    background: #FF6600;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.user-pulse {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgba(255, 102, 0, 0.3);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: user-ping 3s infinite;
+}
+
+@keyframes user-ping {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+
+    100% {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+    }
+}
+
+/* Stats Footer */
+.map-stats {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.map-stat-item {
+    text-align: center;
+}
+
+.map-stat-item h3 {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    margin: 0;
+}
+
+.map-stat-item p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #2ecc71;
+    font-weight: 600;
+    height: 100%;
+}
+
+.blink {
+    width: 10px;
+    height: 10px;
+    background: #2ecc71;
+    border-radius: 50%;
+    animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .live-map-display {
+        height: 300px;
+    }
+
+    .map-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

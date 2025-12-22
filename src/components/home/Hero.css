@@ -134,3 +134,30 @@
         flex-direction: column;
     }
 }
+
+/* Typing Effect */
+.typing-text {
+    color: var(--primary);
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid var(--primary);
+    animation: typing 3s steps(20) infinite alternate, cursor .5s step-end infinite alternate;
+    display: inline-block;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent
+    }
+}
