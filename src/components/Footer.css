@@ -29,16 +29,16 @@
 
 .cta-content h2 {
     font-size: 2.8rem;
-    color: var(--dark);
-    /* Dark text on Yellow background */
+    color: var(--white);
+    /* White text on Orange background */
     line-height: 1.2;
     margin-bottom: 20px;
 }
 
 .cta-content p {
     font-size: 1.1rem;
-    color: rgba(0, 0, 0, 0.7);
-    /* Dark text on Yellow */
+    color: rgba(255, 255, 255, 0.9);
+    /* White text on Orange */
     margin-bottom: 30px;
     max-width: 800px;
     margin-left: auto;
@@ -107,9 +107,9 @@
 
 .footer-social a:hover {
     background: var(--primary);
-    color: var(--dark);
+    color: var(--white);
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255, 214, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(255, 102, 0, 0.3);
 }
 
 .logo-footer {
