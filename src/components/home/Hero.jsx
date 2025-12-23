@@ -14,22 +14,22 @@ const Hero = () => {
                             <span className="typing-text">Made Easy!</span>
                         </h1>
                         <p className="hero-description">
-                            Get 24/7 reliability in Bengaluru. From tire punctures to battery jumpstarts,
-                            our expert mechanics reach you in 30 minutes.
+                            Get 24/7 reliability Pan India. From tire punctures to battery jumpstarts,
+                            our expert mechanics reach you in 30-45 minutes.
                         </p>
 
                         <div className="hero-stats-mini">
                             <div className="mini-stat">
                                 <ShieldCheck color="#FF6600" size={20} />
-                                <span>OEM Trained</span>
+                                <span className="stat-text">OEM Trained</span>
                             </div>
                             <div className="mini-stat">
                                 <MapPin color="#FF6600" size={20} />
-                                <span>Pan Bengaluru</span>
+                                <span className="stat-text">Pan India Service</span>
                             </div>
                             <div className="mini-stat">
                                 <Zap color="#FF6600" size={20} />
-                                <span>30 Min Reach</span>
+                                <span className="stat-text">30-45 Mins Reach</span>
                             </div>
                         </div>
 

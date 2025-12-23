@@ -350,12 +350,81 @@ textarea:focus-visible {
 }
 
 @media (max-width: 768px) {
-  .section-padding {
-    padding: 60px 0;
+
+  /* Container and spacing */
+  .container {
+    padding: 0 16px;
   }
 
+  .section-padding {
+    padding: 50px 0;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn-lg {
+    padding: 14px 24px;
+    font-size: 1rem;
+  }
+
+  /* Cards */
+  .card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .glass-card {
+    padding: 20px;
+  }
+
+  /* Hover effects - reduce on mobile for better performance */
   .hover-lift:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
+  }
+
+  .card:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Disable complex animations on mobile */
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal,
+  .reveal-fade,
+  .reveal-zoom {
+    animation-duration: 0.3s !important;
+    transition-duration: 0.3s !important;
   }
 }
 

@@ -21,7 +21,7 @@ const Footer = () => {
                 <div className="footer-top">
                     <div className="footer-brand">
                         <img src={logo} alt="RSR EXPRESS" className="footer-logo" />
-                        <p className="footer-tagline">Your trusted roadside assistance partner</p>
+                        <p className="footer-tagline"><strong>HQ: Hyderabad | Serving Pan India</strong><br />Your trusted roadside assistance partner</p>
                         <div className="footer-social">
                             <a href="https://www.facebook.com/share/1Dhp6afqY6/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                                 <Facebook size={20} />
@@ -77,7 +77,7 @@ const Footer = () => {
                                 </li>
                                 <li>
                                     <MapPin size={16} />
-                                    <span>Ground Floor, R S R Express 1-301, Near NTR Statue, Bowenpally, Hyderabad</span>
+                                    <span><strong>Main Head Office:</strong><br />Ground Floor, R S R Express 1-301, Near NTR Statue, Bowenpally, Hyderabad</span>
                                 </li>
                             </ul>
                         </div>

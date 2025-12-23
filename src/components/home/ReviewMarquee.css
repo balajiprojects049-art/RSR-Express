@@ -36,12 +36,21 @@
     display: flex;
     gap: 30px;
     width: max-content;
+    -webkit-animation: scroll 40s linear infinite;
     animation: scroll 40s linear infinite;
 }
 
 /* Pause animation on hover */
 .marquee-track:hover {
     animation-play-state: paused;
+}
+
+/* Ensure touch devices (no hover) don't keep the animation paused */
+@media (hover: none) {
+    .marquee-track {
+        -webkit-animation-play-state: running;
+        animation-play-state: running;
+    }
 }
 
 .review-card {
@@ -123,6 +132,19 @@
     100% {
         transform: translateX(calc(-50% - 15px));
         /* Half of track width + half gap */
+    }
+}
+
+/* WebKit keyframes for broader mobile support */
+@-webkit-keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(calc(-50% - 15px));
+        transform: translateX(calc(-50% - 15px));
     }
 }
 

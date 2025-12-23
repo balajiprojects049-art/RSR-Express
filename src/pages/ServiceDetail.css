@@ -1,7 +1,7 @@
 /* Service Detail Landing Page Styles */
 
 .service-landing-page {
-    padding-top: var(--header-height);
+    padding-top: 160px;
     background: #fff;
 }
 
@@ -366,6 +366,150 @@
     }
 
     .service-hero {
-        height: 500px;
+        height: auto;
+        min-height: 500px;
+    }
+
+    .service-hero-card {
+        max-width: 100%;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-hero {
+        height: auto;
+        min-height: 400px;
+        /* Reduced specific height requirement */
+        padding-top: calc(var(--header-height) + 20px);
+        padding-bottom: 40px;
+        align-items: flex-end;
+        /* Align text to bottom like card style or center */
+    }
+
+    .service-hero-card {
+        padding: 20px;
+        /* Reduced padding */
+        max-width: 100%;
+        margin: 0;
+        background: transparent;
+        border: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+    .service-hero-card h1 {
+        font-size: 1.8rem;
+        /* Much smaller font for mobile */
+        margin-bottom: 10px;
+        line-height: 1.2;
+        color: #fff;
+    }
+
+    .service-hero-card p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+        line-height: 1.5;
+        color: #fff;
+        display: none;
+        /* Optionally hide description on very small screens if needed, or keep concise */
+        display: block;
+        /* Keeping it visible but smaller */
+    }
+
+    .service-hero-card .btn {
+        width: 100%;
+        padding: 12px 20px;
+        /* Smaller button */
+        font-size: 0.9rem;
+        height: auto;
+    }
+
+    .hero-service-icon {
+        display: none;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+    /* Adjust features for mobile list view */
+    .info-features {
+        gap: 20px;
+    }
+
+    .feature-row {
+        padding: 15px;
+        flex-direction: row;
+        /* Keep icon next to text */
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .feature-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        /* Prevent shrinking */
+    }
+
+    .feature-text h3 {
+        font-size: 1rem;
+        margin-bottom: 4px;
+    }
+
+    .feature-text p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    .process-step {
+        width: 100%;
+    }
+
+    .p-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .stat-box h3 {
+        font-size: 1.2rem;
+    }
+
+    .faq-question h4 {
+        font-size: 1rem;
+    }
+
+    .faq-answer p {
+        font-size: 0.9rem;
+    }
+
+    .cta-orange-box {
+        padding: 40px 20px;
+        border-radius: 12px;
+    }
+
+    .cta-orange-box h2 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+
+    .cta-orange-box p {
+        font-size: 1rem;
+    }
+
+    .btn-secondary-dark {
+        width: 100%;
+        padding: 14px 30px;
     }
 }

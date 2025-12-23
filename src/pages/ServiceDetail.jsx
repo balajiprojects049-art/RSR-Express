@@ -21,10 +21,19 @@ import bikeService from '../assets/bike_service.jpg';
 import carHero from '../assets/car_hero.jpg';
 import carService from '../assets/car_service.jpg';
 
+import punctureIcon from '../assets/puncture_icon.png';
+import batteryIcon from '../assets/battery_icon.png';
+import fuelIcon from '../assets/fuel_icon.png';
+import keyIcon from '../assets/key_icon.png';
+import carTowingIcon from '../assets/car_towing_icon.png';
+import bikeTowingIcon from '../assets/bike_towing_icon.png';
+import repairIcon from '../assets/repair_icon.png';
+
 // Service Content Data
 const serviceData = {
     // Roadside Assistance
     'puncture': {
+        icon: <img src={punctureIcon} alt="Puncture" className="hero-custom-icon" width={100} />,
         title: 'Puncture & Flat Tyre Services',
         subtitle: 'Whether it\'s a tubeless tyre puncture repair, air fill or a stepney change, why look for a puncture shop when RSR EXPRESS arrives at you spot? We get you moving!',
         heroImage: punctureHero,
@@ -78,6 +87,7 @@ const serviceData = {
         ]
     },
     'battery': {
+        icon: <img src={batteryIcon} alt="Battery" className="hero-custom-icon" width={100} />,
         title: 'Battery Jumpstart Service',
         subtitle: 'Dead battery? Get a boost in minutes.',
         heroImage: batteryHero,
@@ -96,6 +106,7 @@ const serviceData = {
         ]
     },
     'repairs': {
+        icon: <img src={repairIcon} alt="Repairs" className="hero-custom-icon" width={100} />,
         title: 'Minor Mechanical Repairs',
         subtitle: 'On-site fixes for minor breakdowns.',
         heroImage: repairsHero,
@@ -113,6 +124,7 @@ const serviceData = {
         ]
     },
     'fuel': {
+        icon: <img src={fuelIcon} alt="Fuel" className="hero-custom-icon" width={100} />,
         title: 'Emergency Fuel Delivery',
         subtitle: 'Ran out of fuel? We deliver to you.',
         heroImage: fuelHero,
@@ -130,6 +142,7 @@ const serviceData = {
         ]
     },
     'key': {
+        icon: <img src={keyIcon} alt="Key" className="hero-custom-icon" width={100} />,
         title: 'Key Recovery & Lockout',
         subtitle: 'Keys locked inside? We can open it.',
         heroImage: keyHero,
@@ -147,6 +160,7 @@ const serviceData = {
         ]
     },
     'bike': {
+        icon: <img src={bikeTowingIcon} alt="Bike Towing" className="hero-custom-icon" width={100} />,
         title: 'Two-Wheeler Towing',
         subtitle: 'Safe transport for your motorbike.',
         heroImage: bikeHero,
@@ -164,6 +178,7 @@ const serviceData = {
         ]
     },
     'car': {
+        icon: <img src={carTowingIcon} alt="Car Towing" className="hero-custom-icon" width={100} />,
         title: 'Car Towing Service',
         subtitle: 'Reliable towing for all car types.',
         heroImage: carHero,
@@ -236,6 +251,11 @@ const ServiceDetail = () => {
             <section className="service-hero" style={{ backgroundImage: `url(${content.heroImage})` }}>
                 <div className="container">
                     <div className="service-hero-card">
+                        {content.icon && (
+                            <div className="hero-service-icon">
+                                {content.icon}
+                            </div>
+                        )}
                         <h1>{content.title}</h1>
                         <p>{content.subtitle}</p>
                         <Link to="/get-rescued" className="btn btn-primary">GET RESCUED NOW</Link>

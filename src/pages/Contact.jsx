@@ -52,9 +52,9 @@ const Contact = () => {
                                     <MapPin size={24} color="#FF6600" />
                                 </div>
                                 <div>
-                                    <h3>Location</h3>
+                                    <h3>Main Head Office</h3>
                                     <p>Ground Floor, R S R Express 1-301, Near NTR Statue, Opp. MMR Garden Road, Nandamuri Nagar, Bowenpally, Hyderabad</p>
-                                    <p className="contact-note">Serving all over India</p>
+                                    <p className="contact-note">Pan India Service - Serving all over India</p>
                                 </div>
                             </div>
 

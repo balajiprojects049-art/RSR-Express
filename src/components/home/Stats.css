@@ -1,5 +1,5 @@
 .stats-section {
-    background-color: var(--secondary);
+    background: linear-gradient(135deg, var(--primary), #ff8533);
     padding: 60px 0;
     color: var(--white);
 }
@@ -7,25 +7,26 @@
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
+    gap: 24px;
     text-align: center;
 }
 
-.stat-number {
-    font-size: 3rem;
+/* Increase specificity so global page styles don't override these values */
+.stats-section .stat-number {
+    font-size: 2rem;
     font-weight: 800;
     color: var(--primary);
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
-.stat-label {
+.stats-section .stat-label {
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.9rem;
     opacity: 0.9;
 }
 
 @media (max-width: 768px) {
-    .stat-number {
-        font-size: 2.2rem;
+    .stats-section .stat-number {
+        font-size: 1.6rem;
     }
 }

@@ -55,6 +55,19 @@ function App() {
           <Route path="/refund-policy" element={<InfoPage title="Cancellation & Refund Policy" />} />
         </Routes>
         <Footer />
+
+        {/* WhatsApp CTA */}
+        <a
+          href="https://wa.me/9111818222?text=Hi%20RSR%20EXPRESS%2C%20I%20need%20immediate%20assistance%20with%20my%20vehicle."
+          className="whatsapp-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            alt="WhatsApp"
+          />
+        </a>
       </div>
     </Router>
   );

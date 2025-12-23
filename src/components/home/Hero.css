@@ -117,21 +117,66 @@
 }
 
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
+    .hero {
+        min-height: 100vh;
+        padding-top: calc(var(--header-height) + 20px);
+    }
+
+    .hero-content {
+        max-width: 100%;
     }
 
     .hero-card {
-        padding: 30px;
+        padding: 25px;
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        line-height: 1.2;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        margin-bottom: 25px;
     }
 
     .hero-stats-mini {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+
+    .mini-stat {
+        font-size: 0.85rem;
+        flex: 0 1 calc(50% - 6px);
     }
 
     .hero-actions {
         flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-lg {
+        width: 100%;
+        padding: 14px 24px;
+        font-size: 1rem;
+    }
+
+    .btn-outline {
+        width: 100%;
+        padding: 12px 24px;
+    }
+
+    /* Fix typing animation on mobile - disable it to prevent text cutoff */
+    .typing-text {
+        white-space: normal !important;
+        overflow: visible !important;
+        border-right: none !important;
+        animation: none !important;
+        display: inline !important;
     }
 }
 
