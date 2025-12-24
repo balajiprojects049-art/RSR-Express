@@ -7,6 +7,8 @@ import fuelIcon from '../../assets/fuel_icon.png';
 import keyIcon from '../../assets/key_icon.png';
 import carTowingIcon from '../../assets/car_towing_icon.png';
 import bikeTowingIcon from '../../assets/bike_towing_icon.png';
+import commercialTowingIcon from '../../assets/commercial_towing_icon.png';
+import heavyVehicleTowingIcon from '../../assets/heavy_vehicle_towing_icon.png';
 
 const services = [
     {
@@ -44,6 +46,18 @@ const services = [
         title: 'Bike Towing',
         desc: 'Specialized towing equipment for two-wheelers of all sizes.',
         price: '₹499'
+    },
+    {
+        icon: <img src={commercialTowingIcon} alt="Commercial Towing" className="custom-service-icon" width={80} height={80} />,
+        title: 'Commercial Towing',
+        desc: 'Professional towing services for commercial vehicles and fleet operators.',
+        price: '₹1,999'
+    },
+    {
+        icon: <img src={heavyVehicleTowingIcon} alt="Heavy Vehicle Towing" className="custom-service-icon" width={80} height={80} />,
+        title: 'Heavy Vehicle Towing',
+        desc: 'Specialized equipment for long-haul trucks and heavy-duty vehicles.',
+        price: '₹2,499'
     }
 ];
 

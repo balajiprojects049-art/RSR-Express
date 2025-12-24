@@ -10,6 +10,8 @@ import keyIcon from '../assets/key_icon.png';
 import carTowingIcon from '../assets/car_towing_icon.png';
 import bikeTowingIcon from '../assets/bike_towing_icon.png';
 import repairIcon from '../assets/repair_icon.png';
+import commercialTowingIcon from '../assets/commercial_towing_icon.png';
+import heavyVehicleTowingIcon from '../assets/heavy_vehicle_towing_icon.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -75,14 +77,14 @@ const Navbar = () => {
                   Roadside Assistance <ChevronDown size={16} />
                 </button>
                 <div className={`dropdown-menu ${activeDropdown === 'roadside' ? 'active' : ''}`}>
-                  <Link to="/services/puncture" className="dropdown-link">
-                    <img src={punctureIcon} alt="Puncture" className="nav-icon" /> Puncture & Flat Tire
-                  </Link>
                   <Link to="/services/battery" className="dropdown-link">
                     <img src={batteryIcon} alt="Battery" className="nav-icon" /> Battery Jumpstart
                   </Link>
                   <Link to="/services/repairs" className="dropdown-link">
                     <img src={repairIcon} alt="Repairs" className="nav-icon" /> Minor Repairs
+                  </Link>
+                  <Link to="/services/puncture" className="dropdown-link">
+                    <img src={punctureIcon} alt="Puncture" className="nav-icon" /> Puncture & Flat Tire
                   </Link>
                   <Link to="/services/fuel" className="dropdown-link">
                     <img src={fuelIcon} alt="Fuel" className="nav-icon" /> Emergency Fuel
@@ -101,11 +103,17 @@ const Navbar = () => {
                   Towing Services <ChevronDown size={16} />
                 </button>
                 <div className={`dropdown-menu ${activeDropdown === 'towing' ? 'active' : ''}`}>
+                  <Link to="/towing/car" className="dropdown-link">
+                    <img src={carTowingIcon} alt="Car" className="nav-icon" /> Car Towing
+                  </Link>
                   <Link to="/towing/bike" className="dropdown-link">
                     <img src={bikeTowingIcon} alt="Bike" className="nav-icon" /> Bike Towing
                   </Link>
-                  <Link to="/towing/car" className="dropdown-link">
-                    <img src={carTowingIcon} alt="Car" className="nav-icon" /> Car Towing
+                  <Link to="/towing/commercial" className="dropdown-link">
+                    <img src={commercialTowingIcon} alt="Commercial" className="nav-icon" /> Commercial Towing
+                  </Link>
+                  <Link to="/towing/heavy-vehicle" className="dropdown-link">
+                    <img src={heavyVehicleTowingIcon} alt="Heavy Vehicle" className="nav-icon" /> Heavy Vehicle Towing
                   </Link>
                 </div>
               </div>

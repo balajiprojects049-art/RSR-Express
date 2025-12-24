@@ -8,6 +8,8 @@ import Contact from './pages/Contact';
 import ServiceDetail from './pages/ServiceDetail';
 import About from './pages/About';
 import Blog from './pages/Blog';
+import CommercialTowing from './pages/CommercialTowing';
+import HeavyVehicleTowing from './pages/HeavyVehicleTowing';
 import useScrollReveal from './hooks/useScrollReveal';
 import './App.css';
 
@@ -43,6 +45,10 @@ function App() {
           {/* Dynamic Service Routes */}
           <Route path="/services/:serviceId" element={<ServiceDetail />} />
           <Route path="/towing/:serviceId" element={<ServiceDetail />} />
+
+          {/* Dedicated Towing Service Pages */}
+          <Route path="/towing/commercial" element={<CommercialTowing />} />
+          <Route path="/towing/heavy-vehicle" element={<HeavyVehicleTowing />} />
 
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
