@@ -83,9 +83,9 @@ const CommercialTowing = () => {
                             Professional towing services for commercial vehicles and fleet operators across Indian highways
                         </p>
                         <div className="service-hero-cta">
-                            <a href="tel:+919876543210" className="cta-button primary">
-                                <Phone size={20} /> Call Now - ₹1,999
-                            </a>
+                            <Link to="/get-rescued" className="cta-button primary">
+                                GET RESCUED NOW
+                            </Link>
                         </div>
                     </div>
                 </div>

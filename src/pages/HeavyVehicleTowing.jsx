@@ -100,9 +100,9 @@ const HeavyVehicleTowing = () => {
                             Specialized equipment for long-haul trucks, trailers, and heavy-duty vehicles on Indian highways
                         </p>
                         <div className="service-hero-cta">
-                            <a href="tel:+919876543210" className="cta-button primary">
-                                <Phone size={20} /> Emergency Recovery - ₹2,499
-                            </a>
+                            <Link to="/get-rescued" className="cta-button primary">
+                                GET RESCUED NOW
+                            </Link>
                         </div>
                     </div>
                 </div>

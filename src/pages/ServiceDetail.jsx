@@ -113,7 +113,7 @@ const serviceData = {
         contentImage: repairsService,
         features: [
             { icon: <Clock size={32} color="#002D5B" />, title: 'Quick Fixes', desc: 'We handle minor mechanical issues like clutch adjustments and fuse issues on the spot.' },
-            { icon: <Shield size={32} color="#002D5B" />, title: 'Expert Diagonsis', desc: 'Our mechanics are trained to diagnose and fix common breakdown causes.' },
+            { icon: <Shield size={32} color="#002D5B" />, title: 'Expert Diagnosis', desc: 'Our mechanics are trained to diagnose and fix common breakdown causes.' },
             { icon: <MapPin size={32} color="#002D5B" />, title: 'On-Spot Repair', desc: 'Save towing costs by getting your car fixed right where it broke down.' }
         ],
         faqs: [
@@ -341,7 +341,7 @@ const ServiceDetail = () => {
                     <h2 className="section-title">Frequently Asked Questions</h2>
                     <div className="faq-list">
                         {content.faqs.map((faq, index) => (
-                            <div key={index} className={`faq - item ${openFaq === index ? 'open' : ''} `} onClick={() => toggleFaq(index)}>
+                            <div key={index} className={`faq-item ${openFaq === index ? 'open' : ''} `} onClick={() => toggleFaq(index)}>
                                 <div className="faq-question">
                                     <h4>{faq.q}</h4>
                                     {openFaq === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}

@@ -34,6 +34,7 @@ const GetRescued = () => {
         navigator.geolocation.getCurrentPosition(
             (position) => {
                 const { latitude, longitude } = position.coords;
+                // Use a high-precision google maps link
                 const mapLink = `https://www.google.com/maps?q=${latitude},${longitude}`;
                 setFormData(prev => ({ ...prev, location: mapLink }));
                 setIsLocating(false);
@@ -42,14 +43,53 @@ const GetRescued = () => {
                 console.error("Error fetching location:", error);
                 alert("Unable to retrieve your location. Please enter it manually.");
                 setIsLocating(false);
+            },
+            {
+                enableHighAccuracy: true,
+                timeout: 5000,
+                maximumAge: 0
             }
         );
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        const issueLabels = {
+            puncture: "Puncture / Flat Tire",
+            battery: "Battery Jumpstart",
+            repairs: "Minor Mechanical Repair",
+            fuel: "Out of Fuel",
+            key: "Locked Out / Keys Lost",
+            towing: "Need Towing",
+            other: "Other"
+        };
+
+        const vehicleTypeLabel = formData.vehicleType === 'bike' ? 'Two Wheeler' : 'Four Wheeler';
+        const issueLabel = issueLabels[formData.issue] || formData.issue;
+
+        const message = `URGENT: RESCUE REQUEST` +
+            `%0A________________________________` +
+            `%0A%0A` +
+            `Vehicle Details` +
+            `%0A- Type: ${vehicleTypeLabel}` +
+            `%0A- Model: ${formData.makeModel}` +
+            `%0A- Reg No: ${formData.regNumber || 'N/A'}` +
+            `%0A%0A` +
+            `Issue Reported` +
+            `%0A- Problem: ${issueLabel}` +
+            `%0A- Location: ${formData.location}` +
+            `%0A%0A` +
+            `Customer Contact` +
+            `%0A- Phone: ${formData.phone}` +
+            `%0A%0A` +
+            `Please dispatch assistance immediately.`;
+
+        const phoneNumber = "919111818222";
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
+        window.open(whatsappUrl, '_blank');
         setStep(3);
-        // In a real app, this would send the data to a server
     };
 
     return (

@@ -1,5 +1,5 @@
 .get-rescued-page {
-    padding: calc(var(--header-height) + 60px) 0 80px;
+    padding: calc(var(--header-height) + 120px) 0 80px;
     background-color: var(--light);
     min-height: 100vh;
     background-image: linear-gradient(rgba(244, 244, 244, 0.9), rgba(244, 244, 244, 0.9)), url('../../assets/hero-bg.png');
