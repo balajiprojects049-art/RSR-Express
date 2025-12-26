@@ -34,19 +34,19 @@ const GetRescued = () => {
         navigator.geolocation.getCurrentPosition(
             (position) => {
                 const { latitude, longitude } = position.coords;
-                // Use a high-precision google maps link
-                const mapLink = `https://www.google.com/maps?q=${latitude},${longitude}`;
+                // Use the universal Google Maps Search API link for better mobile compatibility
+                const mapLink = `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`;
                 setFormData(prev => ({ ...prev, location: mapLink }));
                 setIsLocating(false);
             },
             (error) => {
                 console.error("Error fetching location:", error);
-                alert("Unable to retrieve your location. Please enter it manually.");
+                alert("Unable to retrieve your location. Please enter it manually or check your browser permissions.");
                 setIsLocating(false);
             },
             {
                 enableHighAccuracy: true,
-                timeout: 5000,
+                timeout: 10000,
                 maximumAge: 0
             }
         );
