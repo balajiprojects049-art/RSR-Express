@@ -7,34 +7,11 @@ import fuelIcon from '../../assets/fuel_icon.png';
 import keyIcon from '../../assets/key_icon.png';
 import carTowingIcon from '../../assets/car_towing_icon.png';
 import bikeTowingIcon from '../../assets/bike_towing_icon.png';
+import repairIcon from '../../assets/repair_icon.png';
 import commercialTowingIcon from '../../assets/commercial_towing_icon.png';
 import heavyVehicleTowingIcon from '../../assets/heavy_vehicle_towing_icon.png';
 
 const services = [
-    {
-        icon: <img src={punctureIcon} alt="Puncture" className="custom-service-icon" width={64} height={64} />,
-        title: 'Puncture & Flat Tire',
-        desc: 'Quick wheel changes or puncture repairs at your location.',
-        price: '₹299'
-    },
-    {
-        icon: <img src={batteryIcon} alt="Battery" className="custom-service-icon" width={64} height={64} />,
-        title: 'Battery Jumpstart',
-        desc: 'Get your engine running again with our professional jumpstart kit.',
-        price: '₹349'
-    },
-    {
-        icon: <img src={fuelIcon} alt="Fuel" className="custom-service-icon" width={64} height={64} />,
-        title: 'Emergency Fuel',
-        desc: 'Running low? We deliver high-quality fuel to get you to the pump.',
-        price: '₹399'
-    },
-    {
-        icon: <img src={keyIcon} alt="Key" className="custom-service-icon" width={64} height={64} />,
-        title: 'Key Recovery',
-        desc: 'Locked out or lost keys? Our experts help you regain access.',
-        price: '₹599'
-    },
     {
         icon: <img src={carTowingIcon} alt="Car Towing" className="custom-service-icon" width={64} height={64} />,
         title: 'Car Towing',
@@ -58,6 +35,36 @@ const services = [
         title: 'Heavy Vehicle Towing',
         desc: 'Specialized equipment for long-haul trucks and heavy-duty vehicles.',
         price: '₹2,499'
+    },
+    {
+        icon: <img src={batteryIcon} alt="Battery" className="custom-service-icon" width={64} height={64} />,
+        title: 'Battery Jumpstart',
+        desc: 'Get your engine running again with our professional jumpstart kit.',
+        price: '₹349'
+    },
+    {
+        icon: <img src={repairIcon} alt="Repairs" className="custom-service-icon" width={64} height={64} />,
+        title: 'Minor Repairs',
+        desc: 'On-site fixes for minor breakdowns like clutch cables or fuses.',
+        price: '₹499'
+    },
+    {
+        icon: <img src={punctureIcon} alt="Puncture" className="custom-service-icon" width={64} height={64} />,
+        title: 'Puncture & Flat Tire',
+        desc: 'Quick wheel changes or puncture repairs at your location.',
+        price: '₹299'
+    },
+    {
+        icon: <img src={fuelIcon} alt="Fuel" className="custom-service-icon" width={64} height={64} />,
+        title: 'Emergency Fuel',
+        desc: 'Running low? We deliver high-quality fuel to get you to the pump.',
+        price: '₹399'
+    },
+    {
+        icon: <img src={keyIcon} alt="Key" className="custom-service-icon" width={64} height={64} />,
+        title: 'Key Recovery',
+        desc: 'Locked out or lost keys? Our experts help you regain access.',
+        price: '₹599'
     }
 ];
 
