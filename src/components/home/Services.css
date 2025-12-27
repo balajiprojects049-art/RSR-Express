@@ -156,13 +156,66 @@
 @media (max-width: 768px) {
     .section-title {
         font-size: 2rem;
+        margin-bottom: 30px;
     }
 
     .services-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .service-card {
+        padding: 15px;
+        border-radius: 16px;
+    }
+
+    .service-icon {
+        padding: 8px;
+        margin-bottom: 12px;
+        border-radius: 10px;
+    }
+
+    .custom-service-icon {
+        width: 36px !important;
+        height: 36px !important;
+    }
+
+    .service-card-title {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+        min-height: 2.5em;
+        /* approximate height for 2 lines */
+    }
+
+    .service-card-desc {
+        font-size: 0.75rem;
+        margin-bottom: 15px;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        /* Limit description to 3 lines */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .service-card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding-top: 12px;
+    }
+
+    .price-tag {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+        white-space: nowrap;
+    }
+
+    .service-link {
+        font-size: 0.8rem;
     }
 
     .service-card:hover {
-        transform: translateY(-6px);
+        transform: translateY(-4px);
     }
 }
