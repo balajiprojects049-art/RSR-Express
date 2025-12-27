@@ -14,9 +14,9 @@ const CostEstimator = () => {
 
         // Base pricing logic (Example values in INR)
         const pricing = {
-            'bike': { 'puncture': 300, 'battery': 500, 'towing': 1200, 'fuel': 400 },
-            'car': { 'puncture': 500, 'battery': 800, 'towing': 2500, 'fuel': 600 },
-            'suv': { 'puncture': 700, 'battery': 1200, 'towing': 3500, 'fuel': 800 }
+            'bike': { 'puncture': 599, 'battery': 599, 'towing': 1299, 'fuel': 599 },
+            'car': { 'puncture': 599, 'battery': 599, 'towing': 1999, 'fuel': 599 },
+            'suv': { 'puncture': 599, 'battery': 599, 'towing': 2499, 'fuel': 599 }
         };
 
         const price = pricing[vehicle][service];
