@@ -16,7 +16,7 @@ const services = [
         icon: <img src={carTowingIcon} alt="Car Towing" className="custom-service-icon" width={64} height={64} />,
         title: 'Car Towing',
         desc: 'Safe flatbed towing for all types of four-wheelers.',
-        price: '₹1,999'
+        price: '₹3,500'
     },
     {
         icon: <img src={bikeTowingIcon} alt="Bike Towing" className="custom-service-icon" width={64} height={64} />,
