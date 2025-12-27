@@ -22,7 +22,7 @@ const services = [
         icon: <img src={bikeTowingIcon} alt="Bike Towing" className="custom-service-icon" width={64} height={64} />,
         title: 'Bike Towing',
         desc: 'Specialized towing equipment for two-wheelers of all sizes.',
-        price: '₹499'
+        price: '₹1,299'
     },
     {
         icon: <img src={commercialTowingIcon} alt="Commercial Towing" className="custom-service-icon" width={80} height={80} />,
