@@ -85,7 +85,7 @@
 
 .service-card:hover .service-icon {
     background: rgba(255, 102, 0, 0.15);
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.1);
 }
 
 .service-card-title {
