@@ -119,7 +119,7 @@
 @media (max-width: 768px) {
     .hero {
         min-height: 100vh;
-        padding-top: calc(var(--header-height) + 20px);
+        padding-top: calc(var(--header-height) + 80px);
     }
 
     .hero-content {
