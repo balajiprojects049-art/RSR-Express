@@ -171,12 +171,15 @@
     }
 
     /* Fix typing animation on mobile - disable it to prevent text cutoff */
+    /* Restore typing animation on mobile */
     .typing-text {
-        white-space: normal !important;
-        overflow: visible !important;
-        border-right: none !important;
-        animation: none !important;
-        display: inline !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        border-right: 3px solid var(--primary) !important;
+        animation: typing 3s steps(20) infinite alternate, cursor .5s step-end infinite alternate !important;
+        display: inline-block !important;
+        font-size: 2rem;
+        /* Ensure size matches other hero text */
     }
 }
 
