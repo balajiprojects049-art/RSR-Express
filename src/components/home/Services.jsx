@@ -28,37 +28,37 @@ const services = [
         icon: <img src={commercialTowingIcon} alt="Commercial Towing" className="custom-service-icon" width={80} height={80} />,
         title: 'Commercial Towing',
         desc: 'Professional towing services for commercial vehicles and fleet operators.',
-        price: '₹1,999'
+        price: '₹4,999'
     },
     {
         icon: <img src={heavyVehicleTowingIcon} alt="Heavy Vehicle Towing" className="custom-service-icon" width={80} height={80} />,
         title: 'Heavy Vehicle Towing',
         desc: 'Specialized equipment for long-haul trucks and heavy-duty vehicles.',
-        price: '₹2,499'
+        price: '₹5,999'
     },
     {
         icon: <img src={batteryIcon} alt="Battery" className="custom-service-icon" width={64} height={64} />,
         title: 'Battery Jumpstart',
         desc: 'Get your engine running again with our professional jumpstart kit.',
-        price: '₹349'
+        price: '₹599'
     },
     {
         icon: <img src={repairIcon} alt="Repairs" className="custom-service-icon" width={64} height={64} />,
         title: 'Minor Repairs',
         desc: 'On-site fixes for minor breakdowns like clutch cables or fuses.',
-        price: '₹499'
+        price: '₹599'
     },
     {
         icon: <img src={punctureIcon} alt="Puncture" className="custom-service-icon" width={64} height={64} />,
         title: 'Puncture & Flat Tire',
         desc: 'Quick wheel changes or puncture repairs at your location.',
-        price: '₹299'
+        price: '₹599'
     },
     {
         icon: <img src={fuelIcon} alt="Fuel" className="custom-service-icon" width={64} height={64} />,
         title: 'Emergency Fuel',
         desc: 'Running low? We deliver high-quality fuel to get you to the pump.',
-        price: '₹399'
+        price: '₹599'
     },
     {
         icon: <img src={keyIcon} alt="Key" className="custom-service-icon" width={64} height={64} />,
