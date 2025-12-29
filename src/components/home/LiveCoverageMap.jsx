@@ -18,9 +18,11 @@ const LiveCoverageMap = () => {
         <section className="live-map-section section-padding">
             <div className="container">
                 <div className="map-header center-text">
-                    <span className="subtitle" style={{ color: '#2ecc71' }}>LIVE COVERAGE</span>
-                    <h2 className="section-title">Mechanics Near You</h2>
-                    <p className="section-desc">Real-time view of our active fleet across Bengaluru.</p>
+                    <span className="subtitle" style={{ color: '#FF6600' }}>24/7 Command Center</span>
+                    <h2 className="section-title">Always Watching, Always Ready</h2>
+                    <p className="section-desc">
+                        Our state-of-the-art dispatch center in Hyderabad operates around the clock, 365 days a year. Leveraging advanced GPS tracking and real-time fleet management, our skilled support team ensures the nearest mechanic reaches you as quickly as possible.
+                    </p>
                 </div>
 
                 <div className="map-container glass-card reveal-zoom">

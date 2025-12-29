@@ -35,7 +35,7 @@ const serviceData = {
     'puncture': {
         icon: <img src={punctureIcon} alt="Puncture" className="hero-custom-icon" width={100} />,
         title: 'Puncture & Flat Tyre Services',
-        subtitle: 'Whether it\'s a tubeless tyre puncture repair, air fill or a stepney change, why look for a puncture shop when RSR EXPRESS arrives at you spot? We get you moving!',
+        subtitle: 'From tubeless tyre repairs and air fills to stepney changes, RSR EXPRESS comes directly to your location, getting you moving quickly and safely.',
         heroImage: punctureHero,
         contentImage: punctureService,
         features: [
@@ -166,9 +166,9 @@ const serviceData = {
         heroImage: bikeHero,
         contentImage: bikeService,
         features: [
-            { icon: <Bike size={32} color="#002D5B" />, title: 'Flatbed Towing', desc: 'We load your bike onto a truck, avoiding any wear on tires during transport.' },
-            { icon: <Shield size={32} color="#002D5B" />, title: 'Secure Strapping', desc: 'Professional strapping ensures your bike stays upright and scratch-free.' },
-            { icon: <MapPin size={32} color="#002D5B" />, title: 'Anywhere Pickup', desc: 'We pick up from highways, basements, or homes.' }
+            { icon: <Bike size={32} color="#002D5B" />, title: 'Flatbed Towing', desc: 'We safely load your bike onto a flatbed truck, preventing any wear or damage to the tires during transport.' },
+            { icon: <Shield size={32} color="#002D5B" />, title: 'Secure Strapping', desc: 'Our expert strapping keeps your bike upright and scratch-free throughout the journey.' },
+            { icon: <MapPin size={32} color="#002D5B" />, title: 'Pickup from Anywhere', desc: 'Whether it’s a highway, basement, or your home, we provide convenient pickup wherever you need us.' }
         ],
         faqs: [
             { q: 'Can you tow superbikes?', a: 'Yes, our flatbed trucks are perfect for safely transporting premium bikes.' },
@@ -184,9 +184,9 @@ const serviceData = {
         heroImage: carHero,
         contentImage: carService,
         features: [
-            { icon: <Truck size={32} color="#002D5B" />, title: 'Flatbed & Lift', desc: 'We have both flatbed trucks for safe transport and wheel-lift trucks for quick city towing.' },
-            { icon: <Shield size={32} color="#002D5B" />, title: 'Accident Recovery', desc: 'Our team is experienced in safely recovering vehicles from accident sites.' },
-            { icon: <Clock size={32} color="#002D5B" />, title: '24/7 Availability', desc: 'Breakdowns don\'t watch the clock, and neither do we.' }
+            { icon: <Truck size={32} color="#002D5B" />, title: 'Flatbed & Wheel-Lift Towing', desc: 'We offer flatbed trucks for secure vehicle transport and wheel-lift trucks for fast, efficient city towing.' },
+            { icon: <Shield size={32} color="#002D5B" />, title: 'Accident Recovery', desc: 'Our experienced team ensures safe and reliable vehicle recovery from accident sites.' },
+            { icon: <Clock size={32} color="#002D5B" />, title: '24/7 Availability', desc: 'Breakdowns can happen anytime. Team RSR is ready around the clock to assist you.' }
         ],
         faqs: [
             { q: 'Is flatbed towing better?', a: 'Yes, for most modern cars (especially AWD/4WD), flatbed is the safest option.' },
@@ -300,22 +300,22 @@ const ServiceDetail = () => {
                     <div className="process-steps">
                         <div className="process-step">
                             <div className="p-icon"><AlertTriangle size={32} /></div>
-                            <p>You face an issue with your vehicle.</p>
+                            <p>Vehicle trouble?</p>
                         </div>
                         <div className="p-arrow">→</div>
                         <div className="process-step">
                             <div className="p-icon"><Phone size={32} /></div>
-                            <p>You get in touch with RSR EXPRESS.</p>
+                            <p>Contact RSR EXPRESS.</p>
                         </div>
                         <div className="p-arrow">→</div>
                         <div className="process-step">
                             <div className="p-icon"><Truck size={32} /></div>
-                            <p>We dispatch the closest help.</p>
+                            <p>Nearest mechanic dispatched instantly.</p>
                         </div>
                         <div className="p-arrow">→</div>
                         <div className="process-step">
                             <div className="p-icon"><CheckCircle size={32} /></div>
-                            <p>You're on your way!</p>
+                            <p>Back on the road safely and quickly.</p>
                         </div>
                     </div>
                 </div>

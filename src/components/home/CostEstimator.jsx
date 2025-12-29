@@ -36,17 +36,17 @@ const CostEstimator = () => {
                         <span className="subtitle">TRANSPARENT PRICING</span>
                         <h2 className="section-title">Get an Instant Cost Estimate</h2>
                         <p className="section-desc">
-                            No hidden fees. Check the estimated cost for your vehicle service relative to your needs.
+                            Transparent pricing with no hidden fees. View the estimated cost for your vehicle service instantly.
                         </p>
 
                         <div className="estimator-features">
                             <div className="est-feature">
                                 <CheckCircle size={20} color="#FF6600" />
-                                <span>No subscription required</span>
+                                <span>No Subscription Required</span>
                             </div>
                             <div className="est-feature">
                                 <CheckCircle size={20} color="#FF6600" />
-                                <span>Pay only after service</span>
+                                <span>Pay only after the service, simple and hassle-free.</span>
                             </div>
                         </div>
                     </div>

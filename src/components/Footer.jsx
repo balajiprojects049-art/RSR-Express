@@ -10,8 +10,8 @@ const Footer = () => {
                 {/* Orange CTA Box */}
                 <div className="footer-cta">
                     <div className="cta-content">
-                        <h2>Vehicle Breakdown? Make <br /> a request to Get Rescued</h2>
-                        <p>With over 51 Mechanics and our Fleet of Tow Trucks, Team RSR is on standby to help you all over India!</p>
+                        <h2>Vehicle Breakdown? Immediate <br /> Assistance, Anywhere in India</h2>
+                        <p>With 51+ certified mechanics and a fully equipped fleet of tow trucks, Team RSR provides fast, reliable roadside assistance 24/7, wherever you are.</p>
                         <a href="/get-rescued" className="btn btn-secondary btn-dark-cta">
                             GET RESCUED NOW
                         </a>

@@ -6,7 +6,7 @@ const blogPosts = [
     {
         id: 1,
         title: "10 Essential Car Maintenance Tips Every Driver Should Know",
-        excerpt: "Regular maintenance can prevent unexpected breakdowns. Learn the key checks that keep your vehicle running smoothly.",
+        excerpt: "Regular maintenance helps prevent unexpected breakdowns. Discover the key checks that keep your vehicle safe and running smoothly.",
         image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=2071&auto=format&fit=crop",
         category: "Maintenance",
         date: "Dec 15, 2024",

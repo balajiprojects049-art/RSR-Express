@@ -27,14 +27,10 @@ const About = () => {
                         <div className="mission-content">
                             <h2 className="text-gradient">Our Mission</h2>
                             <p className="large-text">
-                                To provide fast, reliable, and professional roadside assistance services
-                                that give drivers peace of mind, no matter where their journey takes them.
+                                To deliver fast, reliable, and professional roadside assistance, ensuring drivers have peace of mind wherever their journey takes them.
                             </p>
                             <p>
-                                Founded in Hyderabad, RSR Express started with a simple vision: to create
-                                a network of skilled mechanics and tow operators who could reach any breakdown
-                                location within minutes. Today, we've assisted over 200,000 commuters and
-                                continue to expand our reach across India.
+                                Founded in Hyderabad, RSR Express began with a simple vision: to build a network of skilled mechanics and tow operators capable of reaching any breakdown location quickly. Today, we have assisted over 200,000 commuters and continue to expand our services across India.
                             </p>
                         </div>
                         <div className="mission-image img-hover-zoom">
@@ -123,22 +119,22 @@ const About = () => {
                         <div className="journey-step card border-shine">
                             <div className="step-year">2020</div>
                             <h3>The Beginning</h3>
-                            <p>Started with 5 mechanics in Hyderabad, focusing on puncture repairs and battery assistance.</p>
+                            <p>Launched in Hyderabad with 5 mechanics, providing puncture repairs and battery assistance.</p>
                         </div>
                         <div className="journey-step card border-shine">
                             <div className="step-year">2021</div>
                             <h3>Expansion</h3>
-                            <p>Expanded to major Hyderabad locations and introduced our first fleet of tow trucks.</p>
+                            <p>Extended operations across Hyderabad and introduced our first fleet of tow trucks.</p>
                         </div>
                         <div className="journey-step card border-shine">
                             <div className="step-year">2022</div>
                             <h3>Technology Integration</h3>
-                            <p>Launched our digital platform for faster dispatch and real-time tracking.</p>
+                            <p>Rolled out a digital platform for faster dispatch and real-time vehicle tracking.</p>
                         </div>
                         <div className="journey-step card border-shine">
                             <div className="step-year">2023-Present</div>
                             <h3>Pan-India Vision</h3>
-                            <p>Expanding nationwide with a goal to serve every major city in India.</p>
+                            <p>Expanding nationwide with the goal of serving every major city in India.</p>
                         </div>
                     </div>
                 </div>

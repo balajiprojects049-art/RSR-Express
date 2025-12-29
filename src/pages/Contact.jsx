@@ -12,8 +12,7 @@ const Contact = () => {
                         <span className="subtitle">Get In Touch</span>
                         <h1 className="page-title">Contact Us</h1>
                         <p className="hero-description">
-                            We're here to help 24/7. Reach out to us for any assistance,
-                            questions, or emergency support.
+                            Our team is available 24/7 to provide prompt assistance, answer your queries, and support you in any emergency.
                         </p>
                     </div>
                 </div>
@@ -102,13 +101,10 @@ const Contact = () => {
                 <div className="container">
                     <div className="support-grid">
                         <div className="support-content">
-                            <span className="subtitle">24/7 COMMAND CENTER</span>
+                            <span className="subtitle">24/7 Command Center</span>
                             <h2 className="section-title">Always Watching, Always Ready</h2>
                             <p className="support-text">
-                                Our state-of-the-art dispatch center in Hyderabad operates 24/7/365.
-                                Using advanced GPS tracking and real-time fleet management, our
-                                professional support team ensures the nearest mechanic reaches you
-                                in the shortest possible time.
+                                Our state-of-the-art dispatch center in Hyderabad operates around the clock, 365 days a year. Leveraging advanced GPS tracking and real-time fleet management, our skilled support team ensures the nearest mechanic reaches you as quickly as possible.
                             </p>
                             <div className="support-features">
                                 <div className="feature-item">

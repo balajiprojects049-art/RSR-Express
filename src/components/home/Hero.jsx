@@ -14,8 +14,7 @@ const Hero = () => {
                             <span className="typing-text">Made Easy!</span>
                         </h1>
                         <p className="hero-description">
-                            Get 24/7 reliability Pan India. From tire punctures to battery jumpstarts,
-                            our expert mechanics reach you in 30-45 minutes.
+                            Stuck on the road? We’ve got you covered. Our expert mechanics provide fast and reliable roadside support. From tire punctures to battery jump-starts, arriving within 30–45 minutes, Pan India.
                         </p>
 
                         <div className="hero-stats-mini">
