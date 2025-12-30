@@ -41,18 +41,18 @@ const serviceData = {
         features: [
             {
                 icon: <Clock size={32} color="#002D5B" />,
-                title: '30 mins reach time',
-                desc: 'With over 30 puncture repair mechanics spread across Bengaluru, the closest RSR EXPRESS mechanic is dispatched to your breakdown spot! We aim to reach you within 30 minutes.'
+                title: '30-Minute Reach Time',
+                desc: 'With over 5000+ puncture repair mechanics across India, the nearest RSR EXPRESS mechanic is dispatched to your location aiming to reach you within 30-40 minutes.'
             },
             {
                 icon: <Shield size={32} color="#002D5B" />,
                 title: 'Trained Mechanics',
-                desc: 'An OEM trained & our certified mechanic inspects the flat tyre and identifies the issue. Depending on the issue, he fixes the puncture on-the-spot or replaces the flat tyre with a functional spare tyre, if available.'
+                desc: 'Our OEM-trained and certified mechanics inspect your flat tyre to identify the issue. They either repair the puncture on the spot or replace the flat tyre with a functional spare, if available.'
             },
             {
                 icon: <MapPin size={32} color="#002D5B" />,
-                title: 'Available across Bengaluru',
-                desc: 'Breakfast at MTR, spending the morning at Cubbon Park, meeting friends for lunch at Nagarjuna... Let your day never stop! RSR EXPRESS has got your vehicle covered in case of breakdowns across Bengaluru 24/7.'
+                title: 'Available across India',
+                desc: 'RSR EXPRESS ensures you’re never stranded on the road. With round-the-clock breakdown support available across India, our team is always ready to assist anytime, anywhere. Drive with confidence knowing help is just a call away.'
             }
         ],
         faqs: [
@@ -93,9 +93,9 @@ const serviceData = {
         heroImage: batteryHero,
         contentImage: batteryService,
         features: [
-            { icon: <Clock size={32} color="#002D5B" />, title: 'Instant Start', desc: 'Our technicians carry professional jumpstart kits to get your engine running again instantly.' },
-            { icon: <Shield size={32} color="#002D5B" />, title: 'Battery Health', desc: 'We perform a comprehensive battery health check to ensure it holds charge.' },
-            { icon: <MapPin size={32} color="#002D5B" />, title: 'City-wide Service', desc: 'Available anywhere in Bengaluru.' }
+            { icon: <Clock size={32} color="#002D5B" />, title: 'Instant Jumpstart', desc: 'Our technicians arrive equipped with professional jumpstart kits to restart your vehicle quickly and safely.' },
+            { icon: <Shield size={32} color="#002D5B" />, title: 'Battery Health Check', desc: 'We perform a comprehensive battery inspection to ensure it holds charge and delivers reliable performance.' },
+            { icon: <MapPin size={32} color="#002D5B" />, title: 'Pan-India Availability', desc: 'RSR EXPRESS provides dependable assistance across cities throughout India, anytime you need it.' }
         ],
         faqs: [
             { q: 'Will a jumpstart damage my car?', a: 'No, our professionals use surge-protected equipment.' },
@@ -130,9 +130,9 @@ const serviceData = {
         heroImage: fuelHero,
         contentImage: fuelService,
         features: [
-            { icon: <Fuel size={32} color="#002D5B" />, title: 'Petrol & Diesel', desc: 'We deliver both petrol and diesel directly to your stalled location.' },
-            { icon: <Clock size={32} color="#002D5B" />, title: 'Fast Delivery', desc: 'No need to walk to a petrol bunk. We arrive within minutes.' },
-            { icon: <Shield size={32} color="#002D5B" />, title: 'Safe Handling', desc: 'Fuel is delivered in safe, approved jerricans.' }
+            { icon: <Fuel size={32} color="#002D5B" />, title: 'Petrol & Diesel Delivery', desc: 'Out of fuel? We deliver petrol and diesel directly to your location.' },
+            { icon: <Clock size={32} color="#002D5B" />, title: 'Fast Response', desc: 'No need to walk to a fuel station, our team reaches you quickly.' },
+            { icon: <Shield size={32} color="#002D5B" />, title: 'Safe Handling', desc: 'Fuel is delivered using approved, safety compliant containers.' }
         ],
         faqs: [
             { q: 'How much fuel do you deliver?', a: 'We typically deliver up to 5 litres, sufficient to reach the nearest station.' },
@@ -291,10 +291,9 @@ const ServiceDetail = () => {
             {/* 3. Process Section: "A typical breakdown scenario" */}
             <section className="process-section section-padding">
                 <div className="container">
-                    <h2 className="section-title text-center">A typical breakdown scenario explained</h2>
+                    <h2 className="section-title text-center">A Typical Breakdown Scenario</h2>
                     <p className="section-subtitle text-center">
-                        You've got a issue, you need a doorstep mechanic or just someone who can help you with a stepney change on the spot.
-                        Don't worry! RSR EXPRESS is always nearby and available 24 hours a day.
+                        Got a flat tyre or need a stepney change on the spot? Don’t worry! RSR EXPRESS is always nearby, with trained mechanics available 24/7 to get you back on the road quickly and safely.
                     </p>
 
                     <div className="process-steps">
