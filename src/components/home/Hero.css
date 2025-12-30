@@ -3,7 +3,11 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: calc(var(--header-height) + 40px);
+    /* Create gap between navbar and hero */
+    margin-top: calc(var(--header-height) + 20px);
+    /* Adjust padding since we are pushing the container down */
+    padding-top: 40px;
+    min-height: calc(100vh - var(--header-height) - 20px);
     background-image: url('../../assets/hero-bg.png');
     background-size: cover;
     background-position: center;
@@ -118,8 +122,9 @@
 
 @media (max-width: 768px) {
     .hero {
-        min-height: 100vh;
-        padding-top: calc(var(--header-height) + 80px);
+        /* Mobile: keep the margin but adjust min-height and padding */
+        min-height: calc(100vh - var(--header-height) - 20px);
+        padding-top: 40px;
     }
 
     .hero-content {
